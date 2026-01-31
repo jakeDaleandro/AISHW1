@@ -62,14 +62,13 @@ def main():
     temp_prediction, temp_noise = predict_temperature_stochastic(last_year_temp)
     
     # Output
-    print("\n--- Weather Probability Distribution (Bell Curve Model) ---")
+    print("\n--- Weather Probability Distribution ---")
     for state, prob in weather_probs.items():
         print(f"{state.capitalize():<8}: {prob:.2f}")
     
     print("\n--- Forecast Result ---")
     print(f"Predicted Weather: {weather_prediction.capitalize()}")
-    print(f"Predicted Temperature: {temp_prediction}°C (noise added: {temp_noise}°C)")
-    print("\nModel: Gaussian state distribution + stochastic temperature noise")
+    print(f"Predicted Temperature: {temp_prediction}°C")
 
 
 if __name__ == "__main__":
